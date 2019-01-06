@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body {
+  background-color: #eb2f64;
+  font-family: 'Open-sans', sans-serif;
+  line-height: 1.6rem;
+  color: white; }

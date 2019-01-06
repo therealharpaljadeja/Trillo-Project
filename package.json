@@ -1,0 +1,26 @@
+{
+  "name": "natours-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "concat": "^1.0.3",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "concat:css": "concat css/icon-font.css css/style.css -o css/style.concat.css",
+    "compress:css": "node-sass css/style.concat.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css compress:css",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass"
+  },
+  "author": "",
+  "license": "ISC"
+}
